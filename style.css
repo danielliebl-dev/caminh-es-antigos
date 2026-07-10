@@ -1,73 +1,78 @@
-/* Configurações Globais */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f2eb; /* Fundo bege retrô claro */
-    color: #333333;
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Garante que margens não quebrem o tamanho dos elementos */
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f2eb; /* Bege retrô */
+    color: #333333;
     line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* ==========================================================================
+   2. CABEÇALHO (HEADER)
+   ========================================================================== */
 header {
-    background-color: #1e332a; /* Verde musgo escuro clássico */
+    background-color: #1e332a; /* Verde musgo */
     color: #f5f2eb;
     text-align: center;
-    padding: 3rem 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 40px 20px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.8rem;
-    letter-spacing: 1px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin: 0.5rem 0 0 0;
     font-size: 1.1rem;
     opacity: 0.9;
 }
 
-/* Área Principal */
+/* ==========================================================================
+   3. CORPO DO SITE E GRADE DE CARTÕES (GRID)
+   ========================================================================== */
 main {
     max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* Grade de Cartões (Responsiva para Celular e PC) */
+/* Responsividade automática: cria colunas se houver espaço, ou empilha no celular */
 .grade-caminhoes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    gap: 30px;
 }
 
-/* Estilo de cada Cartão de Caminhão */
+/* ==========================================================================
+   4. ESTILO DOS CARTÕES (CARDS)
+   ========================================================================== */
 .card-caminhao {
     background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
 }
 
-.card-caminhao:hover {
-    transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
-}
-
-/* Controle das Imagens Importadas */
+/* Estilo da Imagem */
 .img-caminhao {
     width: 100%;
-    height: 240px;
-    object-fit: cover; /* Faz as fotos do Google se encaixarem perfeitamente sem distorcer */
+    height: 250px;
+    object-fit: cover; /* Corta a imagem proporcionalmente sem distorcer */
+    background-color: #e0e0e0; /* Cor de fundo caso a imagem do Google falhe */
 }
 
-/* Informações do Texto */
+/* Textos dentro do Cartão */
 .info-caminhao {
-    padding: 1.5rem;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -75,58 +80,63 @@ main {
 
 .info-caminhao h2 {
     color: #1e332a;
-    margin-top: 0;
-    font-size: 1.5rem;
-    border-bottom: 2px solid #d35400; /* Linha laranja ferrugem abaixo do título */
-    padding-bottom: 0.4rem;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #d35400; /* Linha laranja */
+    padding-bottom: 5px;
 }
 
 .info-caminhao p {
     color: #555555;
     font-size: 0.95rem;
-    flex-grow: 1; /* Garante alinhamento caso os textos variem de tamanho */
+    margin-bottom: 15px;
 }
 
-/* Botão de Interação */
+/* ==========================================================================
+   5. BOTÕES E INTERATIVIDADE
+   ========================================================================== */
 .btn-curiosidade {
-    background-color: #d35400; /* Laranja ferrugem/vintage */
-    color: white;
+    background-color: #d35400; /* Laranja ferrugem */
+    color: #ffffff;
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 10px 18px;
     font-size: 0.9rem;
+    font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
-    align-self: flex-start;
-    transition: background 0.2s ease;
-    margin-top: 1rem;
+    margin-top: auto; /* Empurra o botão sempre para o final do card */
+    align-self: flex-start; /* Não deixa o botão esticar na largura toda */
+    transition: background-color 0.2s ease;
 }
 
 .btn-curiosidade:hover {
-    background-color: #a04000;
+    background-color: #a04000; /* Laranja mais escuro no mouse */
 }
 
-/* Caixa de Curiosidade Oculta/Exibida */
+/* Bloco de Curiosidade */
 .curiosidade {
-    margin-top: 1.2rem;
-    padding: 0.8rem;
+    margin-top: 15px;
+    padding: 12px;
     background-color: #fdf2e9;
     border-left: 4px solid #d35400;
     font-style: italic;
     font-size: 0.9rem;
-    color: #444;
+    color: #444444;
 }
 
-/* Classe utilitária para esconder elementos */
+/* Regra de Ouro: Garante que o JavaScript consiga esconder o elemento */
 .escondido {
-    display: none;
+    display: none !important; 
 }
 
-/* Rodapé */
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 25px 20px;
     background-color: #1e332a;
     color: #f5f2eb;
-    margin-top: 4rem;
-    font-size: 0.9rem;/
+    margin-top: 60px;
+    font-size: 0.9rem;
 }
