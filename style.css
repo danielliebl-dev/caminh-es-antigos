@@ -64,7 +64,7 @@ main {
 
 /* Estilo da Imagem */
 .img-caminhao {
-    width: 100%;
+    width: 90%;
     height: 250px;
     object-fit: cover; /* Corta a imagem proporcionalmente sem distorcer */
     background-color: #e0e0e0; /* Cor de fundo caso a imagem do Google falhe */
