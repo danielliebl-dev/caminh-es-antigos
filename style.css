@@ -96,7 +96,7 @@ main {
    5. BOTÕES E INTERATIVIDADE
    ========================================================================== */
 .btn-curiosidade {
-    background-color: #d35400; /* Laranja ferrugem */
+    background-color: #0000d3; /* Laranja ferrugem */
     color: #ffffff;
     border: none;
     padding: 10px 18px;
@@ -110,7 +110,7 @@ main {
 }
 
 .btn-curiosidade:hover {
-    background-color: #a04000; /* Laranja mais escuro no mouse */
+    background-color: #0300a0; /* Laranja mais escuro no mouse */
 }
 
 /* Bloco de Curiosidade */
