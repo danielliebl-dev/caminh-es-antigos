@@ -118,10 +118,10 @@ main {
     margin-top: 15px;
     padding: 12px;
     background-color: #fdf2e9;
-    border-left: 4px solid #d35400;
+    border-left: 4px solid #f2af82;
     font-style: italic;
     font-size: 0.9rem;
-    color: #444444;
+    color: #080606;
 }
 
 /* Regra de Ouro: Garante que o JavaScript consiga esconder o elemento */
